@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Privacy — Alert Reader</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body><main>
+  <p class="eyebrow"><a href="index.html">Alert Reader</a></p>
+  <h1>Privacy policy</h1>
+  <p>Last updated: 12 September 2026.</p>
+  <p>This policy describes the Gmail connection for Alert Reader, a tool that collects public links from selected email alerts. Mail access begins only after the account owner authorises the connection.</p>
+  <h2>What the reader accesses</h2>
+  <p>The reader requests Google's Gmail read-only permission. This permission technically covers the mailbox; Google does not offer a permission limited to one label.</p>
+  <p>The reader uses label metadata to find the exact label <strong>Alert Reader/SEEK</strong>. Every message-list request is restricted to that label. Before retrieving a body, it checks that the message still has that label and that its sender is from SEEK. It rechecks those conditions before exporting a result. If the label is missing, renamed or cannot be checked, the reader stops rather than searching elsewhere.</p>
+  <p>Each run is limited to recent alerts from the preceding 30 days, with time and message limits. It does not fetch attachments or parse attached forwarded messages. Read-only permission does not allow it to send, edit or delete mail.</p>
+  <h2>How the information is used</h2>
+  <p>Message content is processed transiently to extract public SEEK vacancy links. Personalised tracking parameters are removed. The links are organised in a private workspace; relevance and availability still require checking.</p>
+  <p>Email bodies, subjects, sender addresses and Gmail message IDs are not written to the repository, link feed, app or application logs. The reader does not send raw emails to an AI service. It does not sell email data or use it for advertising or training general-purpose AI models.</p>
+  <h2>Where processing and storage happen</h2>
+  <p>Google supplies the authorised Gmail data. Scheduled intake runs in a private GitHub Actions workflow. Connection credentials are stored as encrypted GitHub repository secrets and are used only for this connection. Google and GitHub handle data on their services under their own policies.</p>
+  <p>Only canonical public vacancy links and intake health information, such as check times, counts and fixed error messages, leave the intake stage. Links and associated public listing details can be retained in the private feed and workspace, including archived records. Disabling Gmail access does not automatically remove previously collected links.</p>
+  <h2>Your control</h2>
+  <p>The owner controls which messages receive the label. Removing the label from a message excludes it from subsequent scans. Revoking this app's access in <a href="https://myaccount.google.com/connections">Google Account connections</a> stops future authorised Gmail reads. The owner can also disable the scheduled intake and remove its connection secret in the private GitHub repository.</p>
+  <p>Access will not be expanded to other email senders or labels without a new instruction from the owner.</p>
+  <h2>Google data-use requirements</h2>
+  <p>The reader's use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+  <h2>This information website</h2>
+  <p>These static pages contain no sign-in form, analytics scripts or application cookies. They do not display emails, workspace preferences, credentials or private feed data. GitHub Pages records visitor IP addresses for security purposes as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>.</p>
+  <h2>Questions and changes</h2>
+  <p>For questions about the reader, contact the repository owner through the <a href="https://github.com/ashurlazar/alert-reader-info">information repository</a>. Do not post email content or credentials in a public issue. Changes to the reader's handling of Gmail data will be disclosed here before the changed behaviour is enabled.</p>
+</main></body>
+</html>
