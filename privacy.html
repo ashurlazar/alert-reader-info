@@ -10,10 +10,11 @@
 <body><main>
   <p class="eyebrow"><a href="index.html">Alert Reader</a></p>
   <h1>Privacy policy</h1>
-  <p>Last updated: 12 September 2026.</p>
+  <p>Last updated: 13 September 2026.</p>
   <p>This policy describes the Gmail connection for Alert Reader, a tool that collects public links from selected email alerts. Mail access begins only after the account owner authorises the connection.</p>
   <h2>What the reader accesses</h2>
   <p>The reader requests Google's Gmail read-only permission. This permission technically covers the mailbox; Google does not offer a permission limited to one label.</p>
+  <p>During connection setup, the account email address is checked against the configured owner. Other accounts are rejected before a connection is saved. This identity check does not read messages. The expected account address is stored with the encrypted connection so it can be checked when processing is enabled.</p>
   <p>The reader uses label metadata to find the exact label <strong>Alert Reader/SEEK</strong>. Every message-list request is restricted to that label. Before retrieving a body, it checks that the message still has that label and that its sender is from SEEK. It rechecks those conditions before exporting a result. If the label is missing, renamed or cannot be checked, the reader stops rather than searching elsewhere.</p>
   <p>Each run is limited to recent alerts from the preceding 30 days, with time and message limits. It does not fetch attachments or parse attached forwarded messages. Read-only permission does not allow it to send, edit or delete mail.</p>
   <h2>How the information is used</h2>
